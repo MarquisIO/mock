@@ -4,10 +4,10 @@ package user_test
 import (
 	"testing"
 
-	"github.com/golang/mock/gomock"
-	"github.com/golang/mock/sample"
-	"github.com/golang/mock/sample/imp1"
-	mock_user "github.com/golang/mock/sample/mock_user"
+	"github.com/MarquisIO/mock/gomock"
+	"github.com/MarquisIO/mock/sample"
+	"github.com/MarquisIO/mock/sample/imp1"
+	mock_user "github.com/MarquisIO/mock/sample/mock_user"
 )
 
 func TestRemember(t *testing.T) {

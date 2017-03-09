@@ -32,11 +32,11 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/golang/mock/mockgen/model"
+	"github.com/MarquisIO/mock/mockgen/model"
 )
 
 const (
-	gomockImportPath = "github.com/golang/mock/gomock"
+	gomockImportPath = "github.com/MarquisIO/mock/gomock"
 )
 
 var (

@@ -29,7 +29,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golang/mock/mockgen/model"
+	"github.com/MarquisIO/mock/mockgen/model"
 )
 
 var (
