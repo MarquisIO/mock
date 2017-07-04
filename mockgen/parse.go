@@ -23,7 +23,6 @@ import (
 	"go/build"
 	"go/parser"
 	"go/token"
-	"log"
 	"path"
 	"path/filepath"
 	"strconv"
@@ -430,10 +429,13 @@ func importsOfFile(file *ast.File) map[string]string {
 			_, last := path.Split(importPath)
 			pkg = strings.SplitN(last, ".", 2)[0]
 		}
-		if _, ok := m[pkg]; ok {
-			log.Fatalf("imported package collision: %q imported twice", pkg)
+		it := 0
+		tmp := pkg
+		for _, ok := m[tmp]; ok; _, ok = m[tmp] {
+			tmp = fmt.Sprintf("%s%d", pkg, it)
+			it++
 		}
-		m[pkg] = importPath
+		m[tmp] = importPath
 	}
 	return m
 }
